@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições</title>
+    <style>
+        body {
+            background: purple;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 60%;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
+        }
+
+        p {
+            display: grid;
+            justify-content: center;
+        }
+
+        #resp {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+
+    <section>
+        <div id="dados">
+            <p>Início:<input id="inicio" type="number"></p>
+            <p>Fim:<input id="fim" type="number"></p>
+            <p>Passo:<input id="passo" type="number"></p>
+            <p><input id="botão" type="button" value="Contar" onclick="contar()"></p>
+        </div>
+        <div id="resp">
+            Aguardando a contagem...
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Curso em vídeo</p>
+    </footer>
+
+    <script>
+        let inicio = document.getElementById('inicio')
+        let fim = document.getElementById('fim')
+        let passo = document.getElementById('passo')
+        let res = document.querySelector('div#resp')
+
+        function contar() {
+            let n1 = Number(inicio.value)
+            let n2 = Number(fim.value)
+            let n3 = Number(passo.value)
+
+            if(inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+                window.alert('[ERRO] Preencha todos os campos disponíveis.')
+            } else {
+                if(n3 == 0) {
+                    n3 = 1
+                    window.alert('O passo não pode ser 0, atribuindo automaticamente passo = 1.')
+                }
+                res.innerHTML = `<p><strong>Contando:</strong></p>`
+                if(n1 > n2) {
+                    for(c = n1; c >= n2; c -= n3)
+                    res.innerHTML += `${c} \u{1F449}`
+                } else if (n1 < n2) {
+                    for(c = n1; c <= n2; c += n3)
+                    res.innerHTML += `${c} \u{1F449}`
+                }
+                resp.innerHTML += `\u{1F3C1}`
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+body {
+    background-color: blueviolet;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
+}
+
+#imagem {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    padding-top: 1rem;
+}
+
+#resp {
+    padding: 15px;
+}
+
+
+footer {
+    text-align: center;
+}
+
+#a1 {
+    display: flex;
+    justify-content: center;
+}
+
+#a2 {
+    display: flex;
+    justify-content: center;
+}
+
+#botão-content {
+    display: flex;
+    justify-content: center;
+}
+
+#resp {
+    text-align: center;
+}

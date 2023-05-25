@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu nono documento</title>
+</head>
+<body>
+    <h1>Fiscal de nacionalidade</h1>
+    Em qual país você nasceu? Resp: <input id="pais" type="text"/>
+    <input type="button" id="botao" value="Verificar" onclick="calcular()"/>
+    <div id="div-resp"></div>
+
+    <script>
+        var resposta = document.getElementById('pais')
+
+        function calcular() {
+            var div = document.querySelector('div#div-resp')
+            var resposta2 = String(resposta.value)
+            div.innerHTML = `<p>Você mora no país: <strong>${resposta2}.</strong></p>`
+            if (resposta2 == 'Brasil'|| resposta2 == 'brasil') {
+                div.innerHTML += `<p>Parabéns, você nasceu no melhor país do mundo!</p>`
+            } else {
+                div.innerHTML += `<p>Você é estrangeiro(a).</p>`
+            }
+            div.innerHTML += `<p>Aqui é Brasil <3</p>`
+        }
+
+    </script>
+    
+</body>
+</html>

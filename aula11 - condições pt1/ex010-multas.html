@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu décimo documento</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type="number" id="velocidade"/>Km/h
+    <input type="button" id="botao-verificar" value="Verificar" onclick="calcular()" />
+    <div id="resp"></div>
+
+    <script>
+        let vel = document.getElementById('velocidade')
+
+        function calcular() {
+            let resp = document.getElementById('resp')
+            let veloc = Number(vel.value)
+            resp.innerHTML = `<p>Sua velocidade atual é de ${veloc}Km/h.`
+            if (veloc > 60) {
+                resp.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!`
+            }
+            resp.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        }
+    </script>
+</body>
+</html>

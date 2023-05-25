@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu ? documento</title>
+</head>
+<body>
+    <script>
+        var agora = new Date()
+        var DiaSem = agora.getDay()
+        var img = document.createElement("img")
+
+        var DiaSem = 3
+
+        switch(DiaSem) {
+        case 0:
+        document.body.style.background = 'brown'
+        document.write(`Olá. Feliz Domingo!`)
+        document.createElement("img")
+        break
+        case 1:
+        document.body.style.background = 'blue'
+        document.write(`Olá. Feliz Segunda!`)
+        break
+        case 2:
+        document.body.style.background = 'green'
+        document.write(`Olá. Feliz Terça!`)
+        break
+        case 3: 
+        document.body.style.background = 'yellow'
+        document.write(`Olá. Feliz Quarta!`)
+        break
+        case 4:
+        document.body.style.background = 'purple'
+        document.write(`Olá. Feliz Quinta!`)
+        break
+        case 5: 
+        document.body.style.background = 'orange'
+        document.write(`Olá. Feliz Sexta!`)
+        break
+        case 6:
+        document.body.style.background = 'pink'
+        document.write(`Olá. Feliz Sábado!`)
+        break
+        default:
+        document.write(`[ERRO] Dia da semana não identificado!`)
+}
+    </script>
+</body>
+</html>

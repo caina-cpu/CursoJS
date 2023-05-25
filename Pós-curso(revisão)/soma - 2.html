@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        #botões {
+            display: flex;
+        }
+
+        h1 {
+            font: normal 50pt arial;
+        }
+
+        input {
+            width: 30%;
+        }
+
+        #resposta {
+            margin-top: 50px;
+            font: normal 15pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tratando valores</h1>
+    <div id="botões">
+    <input id="numero1" type="number"> &
+    <input id="numero2" type="number">
+    <input id="botão" type="button" value="Tratar" onclick="somar()">
+    </div>
+
+    <div id="resposta"></div>
+
+    <script>
+        var numero1 = document.getElementById('numero1')
+        var numero2 = document.getElementById('numero2')
+        var resp = document.getElementById('resposta')
+        var botão = document.getElementById('botão')
+        //botão.document.addEventListener('click', somar) 
+        
+        function somar() {
+            if(numero1.value.length == 0 || numero2.value.length ==0) {
+                window.alert(`[ERRO] Coloque valores nos dois campos disponíveis!`)
+            } else {
+                var n1 = Number(numero1.value)
+                var n2 = Number(numero2.value)
+                var soma = n1 + n2
+                var sub = n1 - n2
+                var mult = n1 * n2
+                var div = n1 / n2
+                var maior = 0
+                var menor = 0
+
+                if(n1 > n2)
+                var maior = n1
+                if(n2 > n1)
+                var maior = n2
+                if(n1 < n2)
+                var menor = n1
+                if(n2 < n1)
+                var menor = n2
+                if(n1 == n2)
+                var maior = n1
+                var menor = n1
+
+                resp.innerHTML = `<p>A soma entre os números ${n1} e ${n2} é igual a <strong>${soma.toFixed(2).replace('.', ',')}</strong>.</p>`
+                resp.innerHTML += `<p>A subtração entre os números ${n1} e ${n2} é igual a <strong>${sub.toFixed(2).replace('.', ',')}</strong>.</p>`
+                resp.innerHTML += `<p>A multiplicação entre os números ${n1} e ${n2} é igual a <strong>${mult.toFixed(2).replace('.', ',')}</strong>.</p>`
+                resp.innerHTML += `<p>A divisão entre os números ${n1} e ${n2} é igual a <strong>${div.toFixed(2).replace('.', ',')}</strong>.</p>`
+                resp.innerHTML += `<p>A maior valor entre os números ${n1} e ${n2} é igual a <strong>${maior}</strong>.</p>`
+                resp.innerHTML += `<p>O menor valor entre os números ${n1} e ${n2} é igual a <strong>${menor}</strong>.</p>`
+            }
+        }
+
+    </script>
+</body>
+</html>

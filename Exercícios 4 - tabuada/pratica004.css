@@ -1,0 +1,28 @@
+body {
+    background-color: aqua;
+}
+
+header {
+    text-align: center;
+    padding: 15px;
+    font: 15pt arial;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
+}
+
+#número {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+}
+

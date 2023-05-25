@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 1</title>
+</head>
+<body>
+    <style>
+        body {
+    /*background-color: purple;*/
+    font: normal 15pt arial;
+    }
+
+    #maldicao {
+    color: white;
+    }
+
+    #texto {
+        color: white;
+    }
+
+    </style>
+
+    <h1 id="titulo">Olá, mundo!</h1>
+    <p id="maldicao">Já me livrei da maldição!</p>
+    <div id="texto"></div>
+
+
+    <script>
+        document.body.style.background = 'black'
+        var titulo = document.getElementById('titulo')
+        titulo.style.color = 'yellow'
+
+        var nome = window.prompt('Qual seu nome?')
+        var resp = window.document.querySelector('div#texto')
+
+        window.alert(`Seja bem-vindo, ${nome}.`)
+
+        var numero1 = window.prompt('Por favor, digite um número.')
+        if(numero1.length == 0) {
+            window.alert('Por favor, atualize a página e digite um número válido.')
+        } else {
+        var numero2 = window.prompt('Por favor, digite outro número.')
+        }
+
+
+        if(numero2.length == 0) {
+            window.alert('Por favor, atualize a página e digite um número válido.')
+        } else {
+
+        var n1 = Number(numero1)
+        var n2 = Number(numero2)
+        var soma = n1 + n2
+        var sub = n1 - n2
+        var mult = n1 * n2
+        var div = n1 / n2
+        var media = (n1+n2) / 2
+        var maior = 0
+        var menor = 0
+
+        if(n1 > n2) 
+        var maior = n1
+        if(n2 > n1)
+        var maior = n2
+        if(n1 < n2)
+        var menor = n1
+        if(n2 < n1)
+        var menor = n2
+        if(n1 == n2)
+        var maior = n1
+        if(n2 == n1)
+        var menor = n2   
+        
+        resp.innerHTML = `<p>Seu nome tem ${nome.length} letras.</p>`
+        resp.innerHTML += `<p>A soma dos números que você digitou é igual a ${soma.toFixed(2).replace('.', ',')}.</p>`
+        resp.innerHTML += `<p>A subtração dos números que você digitou é igual a ${sub.toFixed(2).replace('.', ',')}.</p>`
+        resp.innerHTML += `<p>A multipicação dos números que você digitou é igual a ${mult.toFixed(2).replace('.', ',')}.</p>`
+        resp.innerHTML += `<p>A divisão dos números que você digitou é igual a ${div.toFixed(2).replace('.', ',')}.</p>`
+        resp.innerHTML += `<p>A média dos números que você digitou é igual a ${media.toFixed(2).replace('.', ',')}.</p>`
+        resp.innerHTML += `<p>O maior valor digitado foi ${maior.toFixed(2).replace('.', ',')}.</p>`
+        resp.innerHTML += `<p>O menor valor digitado foi ${menor.toFixed(2).replace('.', ',')}.</p>`
+        
+        }
+    </script>
+</body>
+</html>

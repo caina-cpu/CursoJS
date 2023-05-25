@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições 1</title>
+    <style>
+        #dados {
+            display: flex;
+        }
+        
+        .p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <h2>Limite de velocidade da rodovia de acordo com cada país:</h2>
+    <p class="p">Brasil: 60km/h</p>
+    <p class="p">EUA: 70km/h</p>
+    <p class="p">França: 80km/h</p>
+    <p class="p">Inglaterra: 90km/h</p>
+    <p class="p">México: 100km/h</p>
+
+    <div id="dados">
+        Digite seu país:
+        <input id="país" type="text">
+        Digite ua velocidade:
+        <input id="vel" type="number">Km/h
+        <input id="botão" type="button" value="Verificar" onclick="verificar()">
+    </div>
+    <div id="resp"></div>
+
+    <script>
+        var país = document.getElementById('país')
+        var velocidade = document.getElementById('vel')
+        var res = document.getElementById('resp')
+
+        function verificar() {
+            var vel = Number(velocidade.value)
+            var pais = String(país.value)
+
+            //res.innerHTML = `Sua velocidade atual é de ${vel} km/h.`
+
+            if(país.value.length == 0 || velocidade.value.length == 0) {
+                window.alert('[ERRO] Coloque valores nos dois campos!')
+            } else if (pais == 'brasil' && vel < 61) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parabéns, você está dentro da lei! Pode seguir viagem.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'Brasil' && vel < 61) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parabéns, você está dentro da lei! Pode seguir viagem.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'Brasil' && vel > 60) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parado aí! Você está acima do nível de velocidade permitida!.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'brasil' && vel > 60) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parado aí! Você está acima do nível de velocidade permitida!.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'EUA' && vel < 71) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parabéns, você está dentro da lei! Pode seguir viagem.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'eua' && vel < 71) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parabéns, você está dentro da lei! Pode seguir viagem.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'EUA' && vel > 70) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parado aí! Você está acima do nível de velocidade permitida!.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'eua' && vel > 70) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parado aí! Você está acima do nível de velocidade permitida!.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'França' && vel < 81) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parabéns, você está dentro da lei! Pode seguir viagem.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'frança' && vel < 81) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parabéns, você está dentro da lei! Pode seguir viagem.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'França' && vel > 80) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parado aí! Você está acima do nível de velocidade permitida!.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'frança' && vel > 80) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parado aí! Você está acima do nível de velocidade permitida!.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'Inglaterra' && vel < 91) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parabéns, você está dentro da lei! Pode seguir viagem.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'inglaterra' && vel < 91) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parabéns, você está dentro da lei! Pode seguir viagem.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'Inglaterra' && vel > 90) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parado aí! Você está acima do nível de velocidade permitida!.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'inglaterra' && vel > 90) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parado aí! Você está acima do nível de velocidade permitida!.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'México' && vel < 101) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parabéns, você está dentro da lei! Pode seguir viagem.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'méxico' && vel < 101) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parabéns, você está dentro da lei! Pode seguir viagem.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'México' && vel > 100) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parado aí! Você está acima do nível de velocidade permitida!.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else if (pais == 'méxico' && vel > 100) {
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong> Km/h.</p>`
+                res.innerHTML += `<p>Parado aí! Você está acima do nível de velocidade permitida!.</p>`
+                res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            } else {
+                res.innerHTML = `<p>Por favor, digite um país válido. As opções são: <strong>Brasil, EUA, França, Inglaterra ou México.</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>

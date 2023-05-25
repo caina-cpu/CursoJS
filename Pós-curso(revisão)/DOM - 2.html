@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background: purple;
+        }
+
+        #bloco {
+            width: 250px;
+            height: 250px;
+            background-color: aqua;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font: normal 15pt arial;
+        }
+    </style>
+</head>
+<body>
+    <div id="bloco">Interaja</div>
+
+    <script>
+        var bloco = document.getElementById('bloco')
+        bloco.addEventListener('click', clicar)
+        bloco.addEventListener('mouseenter', entrar)
+        bloco.addEventListener('mouseout', sair)
+
+        function clicar() {
+            bloco.style.background = 'green'
+            bloco.innerHTML = 'clicou'
+        }
+
+        function entrar() {
+            bloco.style.background = 'pink'
+            bloco.innerHTML = 'entrou'
+        }
+
+        function sair() {
+            bloco.style.background = 'yellow'
+            bloco.innerHTML = 'saiu'
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada 2</title>
+    <style>
+        body {
+            background: pink;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 60%;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
+        }
+
+        #dados {
+            display: flex;
+            justify-content: center;
+        }
+
+        #resp {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada muito louca</h1>
+    </header>
+
+    <section>
+        <div id="dados">
+            <strong>Número:</strong><input id="numero" type="number">
+            <input id="botão" type="button" value="Gerar Tabuada" onclick="gerar()">
+
+        </div>
+        <div id="resp">
+            Digite um número para saber a sua tabuada.
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Curso em vídeo</p>
+    </footer>
+
+    <script>
+        let numero = document.querySelector('input#numero')
+        let res = document.querySelector('div#resp')
+        
+        function gerar() {
+            if(numero.value.length == 0) {
+                window.alert('[ERRO] Coloque um valor no campo disponível.')
+            } else {
+                let num = Number(numero.value)
+                res.innerHTML = ''
+                for(let pos = 1; pos <= 10; pos++) {
+                    res.innerHTML += `<p>${num} x ${pos} = ${num * pos}</p>`
+                }
+                numero.value = ''
+                numero.focus()
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

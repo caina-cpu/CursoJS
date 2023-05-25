@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu sétimo documento</title>
+    <style>
+        body {background-color: aqua;}
+
+        h1 {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: normal 20pt arial;
+        }
+
+        #calculadora-content {
+            display: flex;
+            width: 100%;
+            height: px;
+            justify-content: center;
+        }
+
+        #botao-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        #resultado-container {
+            width: 100%;
+            margin-top: 30px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #resultado {
+            width: 300px;
+            height: 24px;
+            background-color: aquamarine;
+            border: solid 2px red;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Somando valores</h1>
+    <div id="calculadora-content">
+        <input type="number" id="numero1"/>
+        +
+        <input type="number" id="numero2"/>
+    </div>
+
+    <div id="botao-container">
+        <input id="botao" type="button" value="SOMAR" onclick="somar()"/>
+    </div>
+
+    <div id="resultado-container">
+        <div id="resultado-content">
+            <div id="resultado">Resultado</div>
+        </div>
+
+    <script>
+        function somar() {
+            let numero1 = document.getElementById('numero1')
+            let numero2 = document.getElementById('numero2')
+            let result = document.getElementById ('resultado')
+            let n1 = Number(numero1.value)
+            let n2 = Number(numero2.value)
+            let soma = n1 + n2
+            result.innerHTML = `A soma de ${n1} e ${n2} é igual a <strong>${soma}</strong>`
+        }
+
+    </script>
+    
+</body>
+</html>
